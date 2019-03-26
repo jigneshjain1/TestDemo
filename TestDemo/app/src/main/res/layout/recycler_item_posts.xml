@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_item_post">
+
+    <TextView
+        android:id="@+id/txtPostTitle"
+        style="@style/TextViewStyle"
+        app:layout_constraintEnd_toStartOf="@+id/chkPostSelect"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry"
+        tools:text="Post Title" />
+
+    <TextView
+        android:id="@+id/txtPostCreatedAt"
+        style="@style/TextViewStyle"
+        android:paddingBottom="@dimen/_5sdp"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintEnd_toStartOf="@+id/chkPostSelect"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPostTitle"
+        tools:text="@string/created_at" />
+
+    <CheckBox
+        android:id="@+id/chkPostSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtPostCreatedAt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtPostTitle"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintTop_toBottomOf="@+id/txtPostCreatedAt" />
+
+</android.support.constraint.ConstraintLayout>
